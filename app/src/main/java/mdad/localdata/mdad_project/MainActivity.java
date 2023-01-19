@@ -11,8 +11,6 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnEx;
 
-    //Ayres is testing push function
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
