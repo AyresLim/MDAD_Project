@@ -9,12 +9,14 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button btnEx;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnEx = (Button)findViewById(R.id.btnEx);
+        btnEx = (Button)findViewById(R.id.btnEx);
 
         btnEx.setOnClickListener(new View.OnClickListener() {
             @Override

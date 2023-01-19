@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EDMActivity">
+
+    <TextView
+        android:id="@+id/txtArt"
+        android:layout_width="209dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="76dp"
+        android:text="Artists/Bands"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnMarshmello"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnWarriyo"
+        android:layout_width="397dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="193dp"
+        android:text="Warriyo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnMarshmello"
+        android:layout_width="397dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="398dp"
+        android:text="Marshmello"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnMG"
+        android:layout_width="397dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="328dp"
+        android:text="Martin Garrix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnDS"
+        android:layout_width="397dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="259dp"
+        android:text="Darren Styles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
