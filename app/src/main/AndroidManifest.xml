@@ -13,6 +13,13 @@
         android:theme="@style/Theme.MDAD_Project"
         tools:targetApi="31">
         <activity
+            android:name=".PopActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MetalActivity"
             android:exported="false">
             <meta-data
