@@ -10,8 +10,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button btnEx;
-
-    //dzul was here
+    //this is a testing text
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
