@@ -6,4 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".PopActivity">
 
+    <TextView
+        android:id="@+id/txtArt"
+        android:layout_width="209dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="76dp"
+        android:text="Artists/Bands"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnOR"
+        android:layout_width="397dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="193dp"
+        android:text="One Republic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCold"
+        android:layout_width="397dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="398dp"
+        android:text="Coldplay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnM5"
+        android:layout_width="397dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="328dp"
+        android:text="Maroon 5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnID"
+        android:layout_width="397dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="259dp"
+        android:text="Imagine Dragons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
