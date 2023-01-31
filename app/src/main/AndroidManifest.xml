@@ -13,6 +13,34 @@
         android:theme="@style/Theme.MDAD_Project"
         tools:targetApi="31">
         <activity
+            android:name=".metalfragments.SWSFragment"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".metalfragments.MIWFragment"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".metalfragments.IPFragment"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".metalfragments.BOFragment"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".edmfragments.DarrenStylesFragment"
             android:exported="false">
             <meta-data

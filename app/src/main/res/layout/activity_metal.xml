@@ -38,11 +38,11 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnMetallica"
+        android:id="@+id/btnMIW"
         android:layout_width="397dp"
         android:layout_height="0dp"
         android:layout_marginBottom="328dp"
-        android:text="Metallica"
+        android:text="Motionless In White"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
