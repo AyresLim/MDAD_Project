@@ -48,11 +48,11 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnLNX"
+        android:id="@+id/btnKW"
         android:layout_width="397dp"
         android:layout_height="0dp"
         android:layout_marginBottom="259dp"
-        android:text="Lil Nas X"
+        android:text="Kanye West"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
