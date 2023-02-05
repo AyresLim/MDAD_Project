@@ -1,14 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".metalfragments.SecondSWSFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/txtArt"
+        android:layout_width="209dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="76dp"
+        android:text="Popular Songs"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnIYCH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</FrameLayout>
+
+    <Button
+        android:id="@+id/btnIYCH"
+        android:layout_width="397dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="332dp"
+        android:text="If You Can't Hang"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnBOD"
+        android:layout_width="397dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="268dp"
+        android:text="Better Of Dead"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnBK"
+        android:layout_width="397dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="208dp"
+        android:text="Bloody Knuckles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCC"
+        android:layout_width="397dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="148dp"
+        android:text="Complete Collapse (Acoustic)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".edmfragments.SecondMartinGarrixFragment">
+    tools:context=".popfragments.SecondORFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -14,47 +14,47 @@
         android:layout_marginBottom="76dp"
         android:text="Popular Songs"
         android:textSize="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnVirus"
+        app:layout_constraintBottom_toTopOf="@+id/btnIAW"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 
     <Button
-        android:id="@+id/btnVirus"
+        android:id="@+id/btnIAW"
         android:layout_width="397dp"
         android:layout_height="48dp"
         android:layout_marginBottom="332dp"
-        android:text="Virus"
+        android:text="I Ain't Worried"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnByte"
+        android:id="@+id/btnCS"
         android:layout_width="397dp"
         android:layout_height="0dp"
         android:layout_marginBottom="268dp"
-        android:text="Byte"
+        android:text="Counting Stars"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnPizza"
+        android:id="@+id/btnApologize"
         android:layout_width="397dp"
         android:layout_height="0dp"
         android:layout_marginBottom="208dp"
-        android:text="Pizza"
+        android:text="Apologize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnAnimals"
+        android:id="@+id/btnRun"
         android:layout_width="397dp"
         android:layout_height="0dp"
         android:layout_marginBottom="148dp"
-        android:text="Animals"
+        android:text="Run"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
