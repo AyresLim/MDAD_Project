@@ -1,5 +1,6 @@
 package mdad.localdata.mdad_project.edmfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import mdad.localdata.mdad_project.R;
+import mdad.localdata.mdad_project.martinsongs.AnimalsActivity;
+import mdad.localdata.mdad_project.martinsongs.ByteActivity;
+import mdad.localdata.mdad_project.martinsongs.PizzaActivity;
+import mdad.localdata.mdad_project.martinsongs.VirusActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +22,11 @@ import mdad.localdata.mdad_project.R;
  * create an instance of this fragment.
  */
 public class SecondMartinGarrixFragment extends Fragment {
+
+    Button btnVirus;
+    Button btnByte;
+    Button btnPizza;
+    Button btnAnimals;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,4 +74,43 @@ public class SecondMartinGarrixFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_martin_garrix, container, false);
     }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        btnVirus = (Button)view.findViewById(R.id.btnVirus);
+        btnByte = (Button)view.findViewById(R.id.btnByte);
+        btnAnimals = (Button)view.findViewById(R.id.btnAnimals);
+        btnPizza = (Button)view.findViewById(R.id.btnPizza);
+
+        btnVirus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), VirusActivity.class));
+            }
+        });
+
+        btnByte.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ByteActivity.class));
+            }
+        });
+
+        btnAnimals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), AnimalsActivity.class));
+            }
+        });
+
+        btnPizza.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), PizzaActivity.class));
+            }
+        });
+
+    }
+
 }

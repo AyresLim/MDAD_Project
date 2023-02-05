@@ -1,5 +1,6 @@
 package mdad.localdata.mdad_project.edmfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,17 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import mdad.localdata.mdad_project.R;
+import mdad.localdata.mdad_project.darrensongs.DLMDActivity;
+import mdad.localdata.mdad_project.darrensongs.DYSLYMActivity;
+import mdad.localdata.mdad_project.darrensongs.SwitchActivity;
+import mdad.localdata.mdad_project.darrensongs.UAWActivity;
+import mdad.localdata.mdad_project.marshmellosongs.HappierActivity;
+import mdad.localdata.mdad_project.marshmellosongs.NumbActivity;
+import mdad.localdata.mdad_project.marshmellosongs.ShockwaveActivity;
+import mdad.localdata.mdad_project.marshmellosongs.SilenceActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +26,11 @@ import mdad.localdata.mdad_project.R;
  * create an instance of this fragment.
  */
 public class SecondMarshmelloFragment extends Fragment {
+
+    Button btnNumb;
+    Button btnHappier;
+    Button btnSilence;
+    Button btnShockwave;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,4 +78,43 @@ public class SecondMarshmelloFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_marshmello, container, false);
     }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        btnNumb = (Button)view.findViewById(R.id.btnNumb);
+        btnHappier = (Button)view.findViewById(R.id.btnHappier);
+        btnSilence = (Button)view.findViewById(R.id.btnSilence);
+        btnShockwave = (Button)view.findViewById(R.id.btnShockwave);
+
+        btnNumb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), NumbActivity.class));
+            }
+        });
+
+        btnHappier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), HappierActivity.class));
+            }
+        });
+
+        btnSilence.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), SilenceActivity.class));
+            }
+        });
+
+        btnShockwave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ShockwaveActivity.class));
+            }
+        });
+
+    }
+
 }

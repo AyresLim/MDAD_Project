@@ -1,5 +1,6 @@
 package mdad.localdata.mdad_project.edmfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import mdad.localdata.mdad_project.R;
+import mdad.localdata.mdad_project.warriyosongs.BCActivity;
+import mdad.localdata.mdad_project.warriyosongs.MortalsActivity;
+import mdad.localdata.mdad_project.warriyosongs.OverhoursActivity;
+import mdad.localdata.mdad_project.warriyosongs.VenomActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +22,11 @@ import mdad.localdata.mdad_project.R;
  * create an instance of this fragment.
  */
 public class SecondWarriyoFragment extends Fragment {
+
+    Button btnMortals;
+    Button btnOverhours;
+    Button btnVenom;
+    Button btnBC;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,4 +74,43 @@ public class SecondWarriyoFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_warriyo, container, false);
     }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        btnMortals = (Button)view.findViewById(R.id.btnMortals);
+        btnOverhours = (Button)view.findViewById(R.id.btnOverhours);
+        btnVenom = (Button)view.findViewById(R.id.btnVenom);
+        btnBC = (Button)view.findViewById(R.id.btnBC);
+
+        btnMortals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), MortalsActivity.class));
+            }
+        });
+
+        btnOverhours.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), OverhoursActivity.class));
+            }
+        });
+
+        btnVenom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), VenomActivity.class));
+            }
+        });
+
+        btnBC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), BCActivity.class));
+            }
+        });
+
+    }
+
 }

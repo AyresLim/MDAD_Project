@@ -1,5 +1,6 @@
 package mdad.localdata.mdad_project.edmfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import mdad.localdata.mdad_project.EDMActivity;
 import mdad.localdata.mdad_project.R;
+import mdad.localdata.mdad_project.darrensongs.DLMDActivity;
+import mdad.localdata.mdad_project.darrensongs.DYSLYMActivity;
+import mdad.localdata.mdad_project.darrensongs.SwitchActivity;
+import mdad.localdata.mdad_project.darrensongs.UAWActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +23,11 @@ import mdad.localdata.mdad_project.R;
  * create an instance of this fragment.
  */
 public class SecondDarrenStylesFragment extends Fragment {
+
+    Button btnUAW;
+    Button btnSwitch;
+    Button btnDLMD;
+    Button btnDYSLYM;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -51,6 +63,7 @@ public class SecondDarrenStylesFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -63,4 +76,43 @@ public class SecondDarrenStylesFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_darren_styles, container, false);
     }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        btnUAW = (Button)view.findViewById(R.id.btnUAW);
+        btnSwitch = (Button)view.findViewById(R.id.btnSwitch);
+        btnDLMD = (Button)view.findViewById(R.id.btnDLMD);
+        btnDYSLYM = (Button)view.findViewById(R.id.btnDYSLYM);
+
+        btnUAW.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), UAWActivity.class));
+            }
+        });
+
+        btnSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), SwitchActivity.class));
+            }
+        });
+
+        btnDLMD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), DLMDActivity.class));
+            }
+        });
+
+        btnDYSLYM.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), DYSLYMActivity.class));
+            }
+        });
+
+    }
+
 }
