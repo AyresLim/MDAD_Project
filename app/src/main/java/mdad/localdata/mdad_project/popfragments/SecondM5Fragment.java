@@ -1,5 +1,6 @@
 package mdad.localdata.mdad_project.popfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import mdad.localdata.mdad_project.R;
+import mdad.localdata.mdad_project.m5songs.LSActivity;
+import mdad.localdata.mdad_project.m5songs.MapsActivity;
+import mdad.localdata.mdad_project.m5songs.PayActivity;
+import mdad.localdata.mdad_project.m5songs.SugarActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +22,12 @@ import mdad.localdata.mdad_project.R;
  * create an instance of this fragment.
  */
 public class SecondM5Fragment extends Fragment {
+
+    Button btnPay;
+    Button btnMaps;
+    Button btnSugar;
+    Button btnLS;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,5 +74,43 @@ public class SecondM5Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_m5, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        btnPay = (Button)view.findViewById(R.id.btnPay);
+        btnMaps = (Button)view.findViewById(R.id.btnMaps);
+        btnSugar = (Button)view.findViewById(R.id.btnSugar);
+        btnLS = (Button)view.findViewById(R.id.btnLS);
+
+        btnPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), PayActivity.class));
+            }
+        });
+
+        btnMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), MapsActivity.class));
+            }
+        });
+
+        btnSugar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), SugarActivity.class));
+            }
+        });
+
+        btnLS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), LSActivity.class));
+            }
+        });
+
     }
 }

@@ -1,5 +1,6 @@
 package mdad.localdata.mdad_project.popfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import mdad.localdata.mdad_project.R;
+import mdad.localdata.mdad_project.idsongs.BelieverActivity;
+import mdad.localdata.mdad_project.idsongs.BonesActivity;
+import mdad.localdata.mdad_project.idsongs.DemonsActivity;
+import mdad.localdata.mdad_project.idsongs.ThunderActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +22,11 @@ import mdad.localdata.mdad_project.R;
  * create an instance of this fragment.
  */
 public class SecondIDFragment extends Fragment {
+
+    Button btnBones;
+    Button btnBeliever;
+    Button btnDemons;
+    Button btnThunder;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,5 +73,43 @@ public class SecondIDFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_i_d, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        btnBones = (Button)view.findViewById(R.id.btnBones);
+        btnBeliever = (Button)view.findViewById(R.id.btnBeliever);
+        btnDemons = (Button)view.findViewById(R.id.btnDemons);
+        btnThunder = (Button)view.findViewById(R.id.btnThunder);
+
+        btnBones.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), BonesActivity.class));
+            }
+        });
+
+        btnBeliever.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), BelieverActivity.class));
+            }
+        });
+
+        btnDemons.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), DemonsActivity.class));
+            }
+        });
+
+        btnThunder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ThunderActivity.class));
+            }
+        });
+
     }
 }

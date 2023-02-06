@@ -1,5 +1,6 @@
 package mdad.localdata.mdad_project.hiphopfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import mdad.localdata.mdad_project.R;
+import mdad.localdata.mdad_project.pmsongs.BNActivity;
+import mdad.localdata.mdad_project.pmsongs.CirclesActivity;
+import mdad.localdata.mdad_project.pmsongs.RockActivity;
+import mdad.localdata.mdad_project.pmsongs.WowActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +22,11 @@ import mdad.localdata.mdad_project.R;
  * create an instance of this fragment.
  */
 public class SecondPMFragment extends Fragment {
+
+    Button btnRock;
+    Button btnCircles;
+    Button btnWow;
+    Button btnBN;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,4 +74,43 @@ public class SecondPMFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_p_m, container, false);
     }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        btnRock = (Button)view.findViewById(R.id.btnRock);
+        btnCircles = (Button)view.findViewById(R.id.btnCircles);
+        btnWow = (Button)view.findViewById(R.id.btnWow);
+        btnBN = (Button)view.findViewById(R.id.btnBN);
+
+        btnRock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), RockActivity.class));
+            }
+        });
+
+        btnCircles.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), CirclesActivity.class));
+            }
+        });
+
+        btnWow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), WowActivity.class));
+            }
+        });
+
+        btnBN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), BNActivity.class));
+            }
+        });
+
+    }
+
 }

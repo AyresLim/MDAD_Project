@@ -1,5 +1,6 @@
 package mdad.localdata.mdad_project.metalfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import mdad.localdata.mdad_project.R;
+import mdad.localdata.mdad_project.bosongs.DethroneActivity;
+import mdad.localdata.mdad_project.bosongs.JPActivity;
+import mdad.localdata.mdad_project.bosongs.MercyActivity;
+import mdad.localdata.mdad_project.bosongs.NKActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +22,11 @@ import mdad.localdata.mdad_project.R;
  * create an instance of this fragment.
  */
 public class SecondBOFragment extends Fragment {
+
+    Button btnJP;
+    Button btnDethrone;
+    Button btnNK;
+    Button btnMercy;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,5 +73,43 @@ public class SecondBOFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_b_o, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        btnJP = (Button)view.findViewById(R.id.btnJP);
+        btnDethrone = (Button)view.findViewById(R.id.btnDethrone);
+        btnNK = (Button)view.findViewById(R.id.btnNK);
+        btnMercy = (Button)view.findViewById(R.id.btnMercy);
+
+        btnJP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), JPActivity.class));
+            }
+        });
+
+        btnDethrone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), DethroneActivity.class));
+            }
+        });
+
+        btnNK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), NKActivity.class));
+            }
+        });
+
+        btnMercy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), MercyActivity.class));
+            }
+        });
+
     }
 }

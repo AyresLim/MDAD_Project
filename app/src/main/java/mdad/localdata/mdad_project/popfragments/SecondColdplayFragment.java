@@ -1,5 +1,6 @@
 package mdad.localdata.mdad_project.popfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import mdad.localdata.mdad_project.R;
+import mdad.localdata.mdad_project.coldplaysongs.ParadiseActivity;
+import mdad.localdata.mdad_project.coldplaysongs.TSActivity;
+import mdad.localdata.mdad_project.coldplaysongs.VLVActivity;
+import mdad.localdata.mdad_project.coldplaysongs.YellowActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +22,11 @@ import mdad.localdata.mdad_project.R;
  * create an instance of this fragment.
  */
 public class SecondColdplayFragment extends Fragment {
+
+    Button btnVLV;
+    Button btnParadise;
+    Button btnTS;
+    Button btnYellow;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,5 +73,43 @@ public class SecondColdplayFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_coldplay, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        btnVLV = (Button)view.findViewById(R.id.btnVLV);
+        btnParadise = (Button)view.findViewById(R.id.btnParadise);
+        btnTS = (Button)view.findViewById(R.id.btnTS);
+        btnYellow = (Button)view.findViewById(R.id.btnYellow);
+
+        btnVLV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), VLVActivity.class));
+            }
+        });
+
+        btnParadise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ParadiseActivity.class));
+            }
+        });
+
+        btnTS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), TSActivity.class));
+            }
+        });
+
+        btnYellow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), YellowActivity.class));
+            }
+        });
+
     }
 }

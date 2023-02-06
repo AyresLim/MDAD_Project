@@ -1,5 +1,6 @@
 package mdad.localdata.mdad_project.hiphopfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import mdad.localdata.mdad_project.R;
+import mdad.localdata.mdad_project.eminemsongs.GodActivity;
+import mdad.localdata.mdad_project.eminemsongs.MockingbirdActivity;
+import mdad.localdata.mdad_project.eminemsongs.SupermanActivity;
+import mdad.localdata.mdad_project.eminemsongs.WMActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +22,11 @@ import mdad.localdata.mdad_project.R;
  * create an instance of this fragment.
  */
 public class SecondEminemFragment extends Fragment {
+
+    Button btnMockingbird;
+    Button btnWM;
+    Button btnSuperman;
+    Button btnGod;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,4 +74,43 @@ public class SecondEminemFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_eminem, container, false);
     }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        btnMockingbird = (Button)view.findViewById(R.id.btnMockingbird);
+        btnWM = (Button)view.findViewById(R.id.btnWM);
+        btnSuperman = (Button)view.findViewById(R.id.btnSuperman);
+        btnGod = (Button)view.findViewById(R.id.btnGod);
+
+        btnMockingbird.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), MockingbirdActivity.class));
+            }
+        });
+
+        btnWM.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), WMActivity.class));
+            }
+        });
+
+        btnSuperman.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), SupermanActivity.class));
+            }
+        });
+
+        btnGod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), GodActivity.class));
+            }
+        });
+
+    }
+
 }

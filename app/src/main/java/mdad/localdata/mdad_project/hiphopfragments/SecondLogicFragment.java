@@ -1,5 +1,6 @@
 package mdad.localdata.mdad_project.hiphopfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import mdad.localdata.mdad_project.R;
+import mdad.localdata.mdad_project.logicsongs.BallinActivity;
+import mdad.localdata.mdad_project.logicsongs.EveryActivity;
+import mdad.localdata.mdad_project.logicsongs.HomiActivity;
+import mdad.localdata.mdad_project.logicsongs.PerfectActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +22,11 @@ import mdad.localdata.mdad_project.R;
  * create an instance of this fragment.
  */
 public class SecondLogicFragment extends Fragment {
+
+    Button btnHomi;
+    Button btnBallin;
+    Button btnEvery;
+    Button btnPerfect;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,4 +74,43 @@ public class SecondLogicFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_logic, container, false);
     }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        btnHomi = (Button)view.findViewById(R.id.btnHomi);
+        btnBallin = (Button)view.findViewById(R.id.btnBallin);
+        btnEvery = (Button)view.findViewById(R.id.btnEvery);
+        btnPerfect = (Button)view.findViewById(R.id.btnPerfect);
+
+        btnHomi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), HomiActivity.class));
+            }
+        });
+
+        btnBallin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), BallinActivity.class));
+            }
+        });
+
+        btnEvery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), EveryActivity.class));
+            }
+        });
+
+        btnPerfect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), PerfectActivity.class));
+            }
+        });
+
+    }
+
 }

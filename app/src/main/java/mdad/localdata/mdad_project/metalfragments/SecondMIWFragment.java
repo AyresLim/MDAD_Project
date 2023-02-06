@@ -1,5 +1,6 @@
 package mdad.localdata.mdad_project.metalfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import mdad.localdata.mdad_project.R;
+import mdad.localdata.mdad_project.miwsongs.ALActivity;
+import mdad.localdata.mdad_project.miwsongs.CActivity;
+import mdad.localdata.mdad_project.miwsongs.CyberActivity;
+import mdad.localdata.mdad_project.miwsongs.VoicesActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +22,11 @@ import mdad.localdata.mdad_project.R;
  * create an instance of this fragment.
  */
 public class SecondMIWFragment extends Fragment {
+
+    Button btnC;
+    Button btnVoices;
+    Button btnAL;
+    Button btnCyber;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,4 +74,44 @@ public class SecondMIWFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_m_i_w, container, false);
     }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        btnC = (Button)view.findViewById(R.id.btnC);
+        btnVoices = (Button)view.findViewById(R.id.btnVoices);
+        btnAL = (Button)view.findViewById(R.id.btnAL);
+        btnCyber = (Button)view.findViewById(R.id.btnCyber);
+
+        btnC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), CActivity.class));
+            }
+        });
+
+        btnVoices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), VoicesActivity.class));
+            }
+        });
+
+        btnAL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ALActivity.class));
+            }
+        });
+
+        btnCyber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), CyberActivity.class));
+            }
+        });
+
+    }
+
+
 }

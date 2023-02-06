@@ -1,5 +1,6 @@
 package mdad.localdata.mdad_project.metalfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import mdad.localdata.mdad_project.R;
+import mdad.localdata.mdad_project.swssongs.BKActivity;
+import mdad.localdata.mdad_project.swssongs.BODActivity;
+import mdad.localdata.mdad_project.swssongs.CCActivity;
+import mdad.localdata.mdad_project.swssongs.IYCHActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +22,12 @@ import mdad.localdata.mdad_project.R;
  * create an instance of this fragment.
  */
 public class SecondSWSFragment extends Fragment {
+
+    Button btnIYCH;
+    Button btnBOD;
+    Button btnBK;
+    Button btnCC;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,5 +74,43 @@ public class SecondSWSFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_s_w_s, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        btnIYCH = (Button)view.findViewById(R.id.btnIYCH);
+        btnBOD = (Button)view.findViewById(R.id.btnBOD);
+        btnBK = (Button)view.findViewById(R.id.btnBK);
+        btnCC = (Button)view.findViewById(R.id.btnCC);
+
+        btnIYCH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), IYCHActivity.class));
+            }
+        });
+
+        btnBOD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), BODActivity.class));
+            }
+        });
+
+        btnBK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), BKActivity.class));
+            }
+        });
+
+        btnCC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), CCActivity.class));
+            }
+        });
+
     }
 }

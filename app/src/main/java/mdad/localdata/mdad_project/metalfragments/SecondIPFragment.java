@@ -1,5 +1,6 @@
 package mdad.localdata.mdad_project.metalfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import mdad.localdata.mdad_project.R;
+import mdad.localdata.mdad_project.ipsongs.BDActivity;
+import mdad.localdata.mdad_project.ipsongs.BTActivity;
+import mdad.localdata.mdad_project.ipsongs.GasActivity;
+import mdad.localdata.mdad_project.ipsongs.HurricaneActivity;
+import mdad.localdata.mdad_project.warriyosongs.BCActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +23,11 @@ import mdad.localdata.mdad_project.R;
  * create an instance of this fragment.
  */
 public class SecondIPFragment extends Fragment {
+
+    Button btnBT;
+    Button btnHurricane;
+    Button btnGas;
+    Button btnBD;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,4 +75,46 @@ public class SecondIPFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_i_p, container, false);
     }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        btnBT = (Button)view.findViewById(R.id.btnBT);
+        btnHurricane = (Button)view.findViewById(R.id.btnHurricane);
+        btnGas = (Button)view.findViewById(R.id.btnGas);
+        btnBD = (Button)view.findViewById(R.id.btnBD);
+
+        btnBT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), BTActivity.class));
+            }
+        });
+
+        btnHurricane.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), HurricaneActivity.class));
+            }
+        });
+
+        btnGas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), GasActivity.class));
+            }
+        });
+
+        btnBD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), BDActivity.class));
+            }
+        });
+
+    }
+
+
+
+
 }

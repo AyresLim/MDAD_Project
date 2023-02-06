@@ -1,5 +1,6 @@
 package mdad.localdata.mdad_project.hiphopfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import mdad.localdata.mdad_project.R;
+import mdad.localdata.mdad_project.kw.B2Activity;
+import mdad.localdata.mdad_project.kw.HCActivity;
+import mdad.localdata.mdad_project.kw.HeartActivity;
+import mdad.localdata.mdad_project.kw.StrongerActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +22,11 @@ import mdad.localdata.mdad_project.R;
  * create an instance of this fragment.
  */
 public class SecondKWFragment extends Fragment {
+
+    Button btnHeart;
+    Button btnStronger;
+    Button btnHC;
+    Button btnB2;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,4 +74,43 @@ public class SecondKWFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_k_w, container, false);
     }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        btnHeart = (Button)view.findViewById(R.id.btnHeart);
+        btnStronger = (Button)view.findViewById(R.id.btnStronger);
+        btnHC = (Button)view.findViewById(R.id.btnHC);
+        btnB2 = (Button)view.findViewById(R.id.btnB2);
+
+        btnHeart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), HeartActivity.class));
+            }
+        });
+
+        btnStronger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), StrongerActivity.class));
+            }
+        });
+
+        btnHC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), HCActivity.class));
+            }
+        });
+
+        btnB2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), B2Activity.class));
+            }
+        });
+
+    }
+
 }

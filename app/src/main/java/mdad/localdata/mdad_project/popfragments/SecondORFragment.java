@@ -1,5 +1,6 @@
 package mdad.localdata.mdad_project.popfragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import mdad.localdata.mdad_project.R;
+import mdad.localdata.mdad_project.orsongs.ApologizeActivity;
+import mdad.localdata.mdad_project.orsongs.CSActivity;
+import mdad.localdata.mdad_project.orsongs.IAWActivity;
+import mdad.localdata.mdad_project.orsongs.RunActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +22,12 @@ import mdad.localdata.mdad_project.R;
  * create an instance of this fragment.
  */
 public class SecondORFragment extends Fragment {
+
+    Button btnIAW;
+    Button btnCS;
+    Button btnApologize;
+    Button btnRun;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,5 +74,43 @@ public class SecondORFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_second_o_r, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+
+        btnIAW = (Button)view.findViewById(R.id.btnIAW);
+        btnCS = (Button)view.findViewById(R.id.btnCS);
+        btnApologize = (Button)view.findViewById(R.id.btnApologize);
+        btnRun = (Button)view.findViewById(R.id.btnRun);
+
+        btnIAW.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), IAWActivity.class));
+            }
+        });
+
+        btnCS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), CSActivity.class));
+            }
+        });
+
+        btnApologize.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), ApologizeActivity.class));
+            }
+        });
+
+        btnRun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), RunActivity.class));
+            }
+        });
+
     }
 }
