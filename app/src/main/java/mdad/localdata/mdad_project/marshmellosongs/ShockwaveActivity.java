@@ -38,7 +38,7 @@ public class ShockwaveActivity extends AppCompatActivity {
         imgYoutube = (ImageView) findViewById(R.id.imgYoutube);
 
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new ShockwaveActivity.NetworkTask().execute("http://192.168.0.163/songs/marshmello/shockwave.txt");
+        new ShockwaveActivity.NetworkTask().execute("http://172.30.46.118/songs/marshmello/shockwave.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)

@@ -38,7 +38,7 @@ public class NumbActivity extends AppCompatActivity {
         imgYoutube = (ImageView) findViewById(R.id.imgYoutube);
 
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new NumbActivity.NetworkTask().execute("http://192.168.0.163/songs/marshmello/numb.txt");
+        new NumbActivity.NetworkTask().execute("http://172.30.46.118/songs/marshmello/numb.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)

@@ -9,67 +9,53 @@
     <TextView
         android:id="@+id/txtGenre"
         android:layout_width="101dp"
-        android:layout_height="0dp"
+        android:layout_height="43dp"
         android:layout_marginTop="193dp"
-        android:layout_marginBottom="49dp"
         android:text="Genres"
         android:textSize="32dp"
         app:layout_constraintBottom_toTopOf="@+id/btnEdm"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnPop"
-        android:layout_width="0dp"
+        android:layout_width="397dp"
         android:layout_height="0dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="193dp"
         android:text="POP"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMetal" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnEdm"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="22dp"
+        android:layout_width="397dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="398dp"
         android:text="EDM"
-        app:layout_constraintBottom_toTopOf="@+id/btnHiphop"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtGenre" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnHiphop"
-        android:layout_width="0dp"
+        android:layout_width="397dp"
         android:layout_height="0dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="21dp"
-        android:text="HIP-HOP"
-        app:layout_constraintBottom_toTopOf="@+id/btnMetal"
+        android:layout_marginBottom="328dp"
+        android:text="Hip-Hop"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEdm" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnMetal"
-        android:layout_width="0dp"
+        android:layout_width="397dp"
         android:layout_height="0dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="18dp"
-        android:text="METAL"
-        app:layout_constraintBottom_toTopOf="@+id/btnPop"
+        android:layout_marginBottom="259dp"
+        android:text="Metal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnHiphop" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

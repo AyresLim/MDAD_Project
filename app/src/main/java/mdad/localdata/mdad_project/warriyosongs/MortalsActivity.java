@@ -37,7 +37,7 @@ public class MortalsActivity extends AppCompatActivity {
         imgDeezer = (ImageView) findViewById(R.id.imgDeezer);
 
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new NetworkTask().execute("http://192.168.0.163/songs/warriyo/mortals.txt");
+        new NetworkTask().execute("http://172.30.46.118/songs/warriyo/mortals.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)

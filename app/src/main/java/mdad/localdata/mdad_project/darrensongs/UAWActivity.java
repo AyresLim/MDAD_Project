@@ -38,7 +38,7 @@ public class UAWActivity extends AppCompatActivity {
         imgYoutube = (ImageView) findViewById(R.id.imgYoutube);
 
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new UAWActivity.NetworkTask().execute("http://192.168.0.163/songs/darren/uaw.txt");
+        new UAWActivity.NetworkTask().execute("http://172.30.46.118/songs/darren/uaw.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)

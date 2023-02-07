@@ -15,7 +15,6 @@ public class GenreActivity extends AppCompatActivity {
     Button btnHiphop;
     Button btnPop;
 
-    Button btnLogOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,12 +55,5 @@ public class GenreActivity extends AppCompatActivity {
             }
         });
 
-        btnLogOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(GenreActivity.this, "User has successfully logged out", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(GenreActivity.this, LoginActivity.class));
-            }
-        });
     }
 }
