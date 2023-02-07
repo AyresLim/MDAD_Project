@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class GenreActivity extends AppCompatActivity {
 
@@ -13,6 +14,8 @@ public class GenreActivity extends AppCompatActivity {
     Button btnMetal;
     Button btnHiphop;
     Button btnPop;
+
+    Button btnLogOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,7 @@ public class GenreActivity extends AppCompatActivity {
         btnMetal = (Button)findViewById(R.id.btnMetal);
         btnHiphop = (Button)findViewById(R.id.btnHiphop);
         btnPop = (Button)findViewById(R.id.btnPop);
+        //btnLogOut = (Button)findViewById(R.id.btnLogOut);
 
         btnEDM.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +53,14 @@ public class GenreActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(GenreActivity.this, HiphopActivity.class));
+            }
+        });
+
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(GenreActivity.this, "User has successfully logged out", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(GenreActivity.this, LoginActivity.class));
             }
         });
     }
