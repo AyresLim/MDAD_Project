@@ -11,8 +11,6 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnEx;
 
-    //Ayres was here testests
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
