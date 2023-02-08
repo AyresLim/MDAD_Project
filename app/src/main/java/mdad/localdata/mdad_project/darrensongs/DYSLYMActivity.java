@@ -39,7 +39,7 @@ public class DYSLYMActivity extends AppCompatActivity {
         imgYoutube = (ImageView) findViewById(R.id.imgYoutube);
 
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new DYSLYMActivity.NetworkTask().execute("http://172.30.46.118/songs/darren/dyslym.txt");
+        new DYSLYMActivity.NetworkTask().execute("http://192.168.0.163/songs/darren/dyslym.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)

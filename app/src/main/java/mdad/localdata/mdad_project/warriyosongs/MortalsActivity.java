@@ -3,6 +3,7 @@ package mdad.localdata.mdad_project.warriyosongs;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -22,6 +23,9 @@ import mdad.localdata.mdad_project.R;
 public class MortalsActivity extends AppCompatActivity {
 
 
+    private MediaPlayer mediaPlayer;
+
+
     TextView tvAbout;
     ImageView imgSpotify;
     ImageView imgApple;
@@ -36,8 +40,21 @@ public class MortalsActivity extends AppCompatActivity {
         imgApple = (ImageView) findViewById(R.id.imgApple);
         imgDeezer = (ImageView) findViewById(R.id.imgDeezer);
 
+//        Song: Warriyo - Mortals (feat. Laura Brehm) [NCS Release]
+//        Music provided by NoCopyrightSounds
+//        Free Download/Stream: http://ncs.io/mortals
+//        Watch: http://youtu.be/yJg-Y5byMMw
+
+        mediaPlayer = new MediaPlayer();
+        mediaPlayer = MediaPlayer.create(this, R.raw.mortals_lowerdb);
+
+//        Song: Warriyo - Mortals (feat. Laura Brehm) [NCS Release]
+//        Music provided by NoCopyrightSounds
+//        Free Download/Stream: http://ncs.io/mortals
+//        Watch: http://youtu.be/yJg-Y5byMMw
+
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new NetworkTask().execute("http://172.30.46.118/songs/warriyo/mortals.txt");
+        new NetworkTask().execute("http://192.168.0.163/songs/warriyo/mortals.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
@@ -67,7 +84,28 @@ public class MortalsActivity extends AppCompatActivity {
         });
 
 
+
+
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // Your code to start the playback here
+
+        mediaPlayer.start();
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        // Your code to release the MediaPlayer here
+
+        mediaPlayer.release();
+
+    }
+
 
     private class NetworkTask extends AsyncTask<String, Void, String> {
         String  testMsg="";

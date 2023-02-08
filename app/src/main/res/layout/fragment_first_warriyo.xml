@@ -9,7 +9,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="40dp"
         tools:context=".edmfragments.FirstWarriyoFragment">
 
 
@@ -81,17 +80,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imgFacebook" />
 
-        <ListView
-            android:id="@+id/list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnCreate" />
+            app:layout_constraintTop_toBottomOf="@+id/btnCreate">
 
-
-
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="54dp"
+                tools:layout_editor_absoluteY="121dp" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnCreate"
@@ -102,6 +106,8 @@
             app:layout_constraintHorizontal_bias="0.518"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

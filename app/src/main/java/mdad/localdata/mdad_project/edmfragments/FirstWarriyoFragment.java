@@ -1,6 +1,7 @@
 package mdad.localdata.mdad_project.edmfragments;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -29,9 +31,9 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import mdad.localdata.mdad_project.EditWarriyoActivity;
+import mdad.localdata.mdad_project.edmreviews.EditWarriyoActivity;
 import mdad.localdata.mdad_project.R;
-import mdad.localdata.mdad_project.WarriyoReviewActivity;
+import mdad.localdata.mdad_project.edmreviews.WarriyoReviewActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -43,6 +45,10 @@ public class FirstWarriyoFragment extends Fragment {
     public static String ipBaseAddress = "http://192.168.0.163/products/reviews/warriyo";
 
     Button btnCreate;
+
+    ImageView imgTwitter;
+    ImageView imgIG;
+    ImageView imgFacebook;
 
     //variable to store ListView
     ListView lv;
@@ -106,6 +112,36 @@ public class FirstWarriyoFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
 
         btnCreate = (Button) view.findViewById(R.id.btnCreate);
+        imgTwitter = (ImageView) view.findViewById(R.id.imgTwitter);
+        imgFacebook = (ImageView) view.findViewById(R.id.imgFacebook);
+        imgIG = (ImageView) view.findViewById(R.id.imgIG);
+
+        imgTwitter.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v)
+            {
+                Uri uri = Uri.parse("https://twitter.com/warriyo");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
+        imgFacebook.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v)
+            {
+                Uri uri = Uri.parse("https://www.facebook.com/WarriyoMusic");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
+        imgIG.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v)
+            {
+                Uri uri = Uri.parse("https://www.instagram.com/warriyo");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
 
         // ArrayList to store product info in Hashmap for ListView
         productsList = new ArrayList<HashMap<String, String>>();
