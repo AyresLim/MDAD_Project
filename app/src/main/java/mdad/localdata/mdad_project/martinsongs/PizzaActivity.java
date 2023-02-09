@@ -38,7 +38,7 @@ public class PizzaActivity extends AppCompatActivity {
         imgYoutube = (ImageView) findViewById(R.id.imgYoutube);
 
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new PizzaActivity.NetworkTask().execute("http://172.30.46.96/songs/martin/pizza.txt");
+        new PizzaActivity.NetworkTask().execute("http://172.30.68.237/songs/martin/pizza.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
