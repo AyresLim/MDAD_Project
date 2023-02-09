@@ -42,7 +42,7 @@ import mdad.localdata.mdad_project.edmreviews.DarrenStylesReviewActivity;
  */
 public class FirstDarrenStylesFragment extends Fragment {
 
-    public static String ipBaseAddress = "http://172.30.46.96/products/reviews/darren";
+    public static String ipBaseAddress = "http://172.30.68.237/products/reviews/darren";
 
     Button btnCreate;
 

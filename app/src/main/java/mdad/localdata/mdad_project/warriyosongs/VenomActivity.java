@@ -38,7 +38,7 @@ public class VenomActivity extends AppCompatActivity {
         imgYoutube = (ImageView) findViewById(R.id.imgYoutube);
 
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new VenomActivity.NetworkTask().execute("http://172.30.46.96/songs/warriyo/venom.txt");
+        new VenomActivity.NetworkTask().execute("http://172.30.68.237/songs/warriyo/venom.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)

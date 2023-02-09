@@ -39,7 +39,7 @@ public class HappierActivity extends AppCompatActivity {
         imgYoutube = (ImageView) findViewById(R.id.imgYoutube);
 
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new HappierActivity.NetworkTask().execute("http://172.30.46.96/songs/marshmello/happier.txt");
+        new HappierActivity.NetworkTask().execute("http://172.30.68.237/songs/marshmello/happier.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
