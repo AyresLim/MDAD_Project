@@ -29,10 +29,10 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText etUser, etPassword;
     private String user, password;
-    private String URL = "http://192.168.0.163//LoginRegister2/login.php";
+    private String URL = "http://172.30.46.96//LoginRegister2/login.php";
 
     Button btnReg;
-    Button btnTemp;
+    //Button btnTemp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,14 +43,14 @@ public class LoginActivity extends AppCompatActivity {
         etUser = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
 
-        btnTemp = (Button)findViewById(R.id.btnTemp);
+        //btnTemp = (Button)findViewById(R.id.btnTemp);
 
-        btnTemp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, GenreActivity.class));
-            }
-        });
+//        btnTemp.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(LoginActivity.this, GenreActivity.class));
+//            }
+//        });
     }
 
     public void login(View view) {

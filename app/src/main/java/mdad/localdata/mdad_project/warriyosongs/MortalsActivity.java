@@ -46,7 +46,7 @@ public class MortalsActivity extends AppCompatActivity {
 //        Watch: http://youtu.be/yJg-Y5byMMw
 
         mediaPlayer = new MediaPlayer();
-        mediaPlayer = MediaPlayer.create(this, R.raw.mortals_lowerdb);
+        mediaPlayer = MediaPlayer.create(this, R.raw.mortals);
 
 //        Song: Warriyo - Mortals (feat. Laura Brehm) [NCS Release]
 //        Music provided by NoCopyrightSounds
@@ -54,7 +54,7 @@ public class MortalsActivity extends AppCompatActivity {
 //        Watch: http://youtu.be/yJg-Y5byMMw
 
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new NetworkTask().execute("http://192.168.0.163/songs/warriyo/mortals.txt");
+        new NetworkTask().execute("http://172.30.46.96/songs/warriyo/mortals.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)

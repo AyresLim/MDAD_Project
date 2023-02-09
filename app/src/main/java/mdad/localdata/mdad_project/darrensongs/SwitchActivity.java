@@ -38,7 +38,7 @@ public class SwitchActivity extends AppCompatActivity {
         imgYoutube = (ImageView) findViewById(R.id.imgYoutube);
 
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new SwitchActivity.NetworkTask().execute("http://192.168.0.163/songs/darren/switch.txt");
+        new SwitchActivity.NetworkTask().execute("http://172.30.46.96/songs/darren/switch.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)

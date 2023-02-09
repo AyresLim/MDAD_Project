@@ -42,7 +42,7 @@ import mdad.localdata.mdad_project.edmreviews.WarriyoReviewActivity;
  */
 public class FirstWarriyoFragment extends Fragment {
 
-    public static String ipBaseAddress = "http://192.168.0.163/products/reviews/warriyo";
+    public static String ipBaseAddress = "http://172.30.46.96/products/reviews/warriyo";
 
     Button btnCreate;
 

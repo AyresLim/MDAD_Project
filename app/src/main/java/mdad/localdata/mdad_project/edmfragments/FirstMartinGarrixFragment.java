@@ -42,7 +42,7 @@ import mdad.localdata.mdad_project.R;
  */
 public class FirstMartinGarrixFragment extends Fragment {
 
-    public static String ipBaseAddress = "http://192.168.0.163/products/reviews/martin";
+    public static String ipBaseAddress = "http://172.30.46.96/products/reviews/martin";
 
     Button btnCreate;
 

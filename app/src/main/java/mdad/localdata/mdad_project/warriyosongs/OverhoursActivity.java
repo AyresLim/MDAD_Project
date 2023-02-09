@@ -38,7 +38,7 @@ public class OverhoursActivity extends AppCompatActivity {
         imgYoutube = (ImageView) findViewById(R.id.imgYoutube);
 
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new OverhoursActivity.NetworkTask().execute("http://192.168.0.163/songs/warriyo/overhours.txt");
+        new OverhoursActivity.NetworkTask().execute("http://172.30.46.96/songs/warriyo/overhours.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)

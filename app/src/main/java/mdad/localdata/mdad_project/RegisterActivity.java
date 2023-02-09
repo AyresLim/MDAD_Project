@@ -31,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
     private String user, password, confirmpassword;
     private Button btnRegister;
 
-    private String URL = "http://192.168.0.163//LoginRegister2/register.php";
+    private String URL = "http://172.30.46.96//LoginRegister2/register.php";
     Button btnLogin;
 
     @Override

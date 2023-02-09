@@ -36,15 +36,15 @@
         app:layout_constraintBottom_toTopOf="@+id/btnReg"
         app:layout_constraintStart_toStartOf="@+id/btnReg" />
 
-    <Button
-        android:id="@+id/btnTemp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="33dp"
-        android:text="Temp"
-        app:layout_constraintStart_toStartOf="@+id/btnReg"
-        app:layout_constraintTop_toBottomOf="@+id/btnReg" />
+<!--    <Button-->
+<!--        android:id="@+id/btnTemp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="6dp"-->
+<!--        android:layout_marginTop="33dp"-->
+<!--        android:text="Temp"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/btnReg"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btnReg" />-->
 
     <TextView
         android:id="@+id/txtNew"
