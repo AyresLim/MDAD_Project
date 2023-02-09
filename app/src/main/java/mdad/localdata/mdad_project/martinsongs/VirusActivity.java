@@ -38,7 +38,7 @@ public class VirusActivity extends AppCompatActivity {
         imgYoutube = (ImageView) findViewById(R.id.imgYoutube);
 
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new VirusActivity.NetworkTask().execute("http://172.30.68.237/songs/martin/virus.txt");
+        new VirusActivity.NetworkTask().execute("http://172.30.46.96/songs/martin/virus.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)

@@ -39,7 +39,7 @@ public class DLMDActivity extends AppCompatActivity {
         imgYoutube = (ImageView) findViewById(R.id.imgYoutube);
 
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new DLMDActivity.NetworkTask().execute("http://172.30.68.237/songs/darren/dlmd.txt");
+        new DLMDActivity.NetworkTask().execute("http://172.30.46.96/songs/darren/dlmd.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)

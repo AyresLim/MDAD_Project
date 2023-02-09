@@ -38,7 +38,7 @@ public class ByteActivity extends AppCompatActivity {
         //imgYoutube = (ImageView) findViewById(R.id.imgYoutube);
 
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new ByteActivity.NetworkTask().execute("http://172.30.68.237/songs/martin/byte.txt");
+        new ByteActivity.NetworkTask().execute("http://172.30.46.96/songs/martin/byte.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)

@@ -39,7 +39,7 @@ public class SilenceActivity extends AppCompatActivity {
         //imgYoutube = (ImageView) findViewById(R.id.imgYoutube);
 
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new SilenceActivity.NetworkTask().execute("http://172.30.68.237/songs/marshmello/silence.txt");
+        new SilenceActivity.NetworkTask().execute("http://172.30.46.96/songs/marshmello/silence.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)

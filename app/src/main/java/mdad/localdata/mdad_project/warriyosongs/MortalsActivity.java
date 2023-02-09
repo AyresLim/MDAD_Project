@@ -54,7 +54,7 @@ public class MortalsActivity extends AppCompatActivity {
 //        Watch: http://youtu.be/yJg-Y5byMMw
 
         tvAbout = (TextView) findViewById(R.id.tvAbout);
-        new NetworkTask().execute("http://172.30.68.237/songs/warriyo/mortals.txt");
+        new NetworkTask().execute("http://172.30.46.96/songs/warriyo/mortals.txt");
 
         imgSpotify.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)

@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText etUser, etPassword;
     private String user, password;
-    private String URL = "http://172.30.68.237//LoginRegister2/login.php";
+    private String URL = "http://172.30.46.96//LoginRegister2/login.php";
 
     Button btnReg;
     //Button btnTemp;

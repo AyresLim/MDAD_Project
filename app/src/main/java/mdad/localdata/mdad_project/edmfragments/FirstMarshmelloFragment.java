@@ -42,7 +42,7 @@ import mdad.localdata.mdad_project.edmreviews.MarshmelloReviewActivity;
  */
 public class FirstMarshmelloFragment extends Fragment {
 
-    public static String ipBaseAddress = "http://172.30.68.237/products/reviews/marshmello";
+    public static String ipBaseAddress = "http://172.30.46.96/products/reviews/marshmello";
 
     Button btnCreate;
 
